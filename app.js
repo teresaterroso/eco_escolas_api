@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/api/test', (req, res) => {
+app.use('/api/test', (req, res) => {
     // log request verb, URL and body
     console.log(`Received ${req.method} request to ${req.url} with body:`, req.body);
     res.json({ message: 'Hello from the API!' });
